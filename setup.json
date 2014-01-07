@@ -1,0 +1,7 @@
+{
+	"project":"GTU",
+	"project_path":"/",
+	"modules":["login", "backend", "configuration", "manage"],
+	"module_path":"modules",
+	"languages":["en", "es"]
+}

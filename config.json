@@ -1,0 +1,10 @@
+{
+	"modules": {
+		"login": {},
+		"backend": {},
+		"dashboard": {"i": "glyphicon glyphicon-home"},
+		"manage": {"i": "glyphicon glyphicon-list"},
+		"configuration": {"i": "glyphicon glyphicon-cog"}
+	},
+	"modules_path": "modules/"
+}
