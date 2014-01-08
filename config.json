@@ -4,7 +4,10 @@
 		"backend": {},
 		"dashboard": {"i": "glyphicon glyphicon-home"},
 		"manage": {"i": "glyphicon glyphicon-list"},
-		"configuration": {"i": "glyphicon glyphicon-cog"}
+		"configuration": {"i": "glyphicon glyphicon-cog"},
+		"cliente": {},
+		"administrador": {},
+		"tecnico": {}
 	},
 	"modules_path": "modules/"
 }
