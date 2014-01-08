@@ -86,26 +86,8 @@ window.dhtmlHistory.create({
 	};
 
 	Main.prototype.handleHistory = function(newLocation, historyData) {
-		console.log('loaded', Application.a.loaded);
 		if(typeof Application.a.loaded === false){
 			Application.loadCategory(newLocation);
-		}
-	};
-
-	Main.prototype.activeMenuCategory = function(category) {
-		this.clearMenu();
-		var el = document.querySelector('#side-menu>li>a[data-module="'+category+'"]');
-		if(el !== null){
-			el = el.parentNode;
-			el.className = 'active';
-		}
-	};
-
-	Main.prototype.clearMenu = function() {
-		var elms = document.querySelectorAll('#side-menu>li');
-		for(var i = 0, len = elms.length; i < len; i++){
-			var el = elms[i];
-			el.className = '';
 		}
 	};
 
@@ -113,7 +95,6 @@ window.dhtmlHistory.create({
 		var url = this.handleURL(category);
 		if(category !== 'backend'){
 			dhtmlHistory.add(category, {message: "Module " +url[0]});
-			this.activeMenuCategory(url[0]);
 		}
 
 		switch(category){
@@ -123,31 +104,18 @@ window.dhtmlHistory.create({
 				this.a.div = '#content';
 			break;
 			default:
-				this.a.div = '#modules-content';
+				this.a.div = '#content';
 			break;
 		}
 
 		this.a.getModule(url[0]);
 		this.a.current._url = url;
 
-		if(category !== 'backend'){
-			var t = this;
-			$(this.a.div).fadeOut('fast', function(){
-				t.a.current.start(function(){
-					$(t.a.div).fadeIn('fast', function(){
-						if(typeof callback === 'function'){
-							callback();
-						}
-					});
-				});
-			});
-		}else{
-			this.a.current.start(function(){
-				if(typeof callback === 'function'){
-					callback();
-				}
-			});
-		}
+		this.a.current.start(function(){
+			if(typeof callback === 'function'){
+				callback();
+			}
+		});
 	};
 
 	Main.prototype.browserLanguage = function() {
