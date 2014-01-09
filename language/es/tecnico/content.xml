@@ -1,6 +1,7 @@
 <content>
 	<dom>
-		<titulo>Tecnico</titulo>
-		<contenido>Este texto esta en un xml y se muestra en un div dentro de un html</contenido>
+		<menuUsuario>Usuario</menuUsuario>
+		<submenu1>Una acción</submenu1>
+		<salirSis>Salir del sistema</salirSis>
 	</dom>
 </content>

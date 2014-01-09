@@ -1,0 +1,22 @@
+.btn-gtu {
+	text-align: center;
+	vertical-align: center;
+	height: 250px;
+
+}
+.btn-gtu img{
+	margin-right: auto;
+	margin-left: auto;
+}
+.content-gtu{
+	background: #42464e;
+}
+#btn-gtu-1{
+	background: #3ca5a6;
+}
+#btn-gtu-2{
+	background: #a96892;
+}
+#btn-gtu-3{
+	background: #facc69;
+}
