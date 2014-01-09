@@ -1,4 +1,6 @@
 <content>
 	<dom>
+		<titulo>Technician</titulo>
+		<contenido>This text had been write in a XML file and show in a div inside a HTML file</contenido>
 	</dom>
 </content>
